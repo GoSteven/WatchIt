@@ -14,7 +14,10 @@ mongo = PyMongo(app)
 @app.route('/')
 def home_page():
 #    return 'hello steven'
-    print mongo.db.openshift.find_one()
+    try:
+        print mongo.db.openshift.find_one()
+    except Exception, e:
+        print e
     return 'hello steven'
 
 
