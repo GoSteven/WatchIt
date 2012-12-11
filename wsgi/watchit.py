@@ -14,7 +14,8 @@ mongo = PyMongo(app)
 @app.route('/')
 def home_page():
 #    return 'hello steven'
-    return str(json.dumps(mongo.db.openshift.find_one()))
+    print mongo.db.openshift.find_one()
+    return 'hello steven'
 
 
 
@@ -23,4 +24,4 @@ def home_page():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
