@@ -6,5 +6,5 @@ setup(name='WatchIt',
       author='Steven You',
       author_email='steven@gosteven.com',
       url='http://gosteven.com',
-      install_requires=['Flask','pymongo'],
+      install_requires=['Flask','pymongo','Flask-PyMongo'],
      )
