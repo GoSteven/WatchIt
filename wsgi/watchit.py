@@ -13,7 +13,8 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def home_page():
-    return str(json.dumps(mongo.db.openshift.find_one()))
+    return 'hello steven'
+#    return str(json.dumps(mongo.db.openshift.find_one()))
 
 
 
