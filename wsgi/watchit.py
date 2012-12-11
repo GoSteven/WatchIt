@@ -1,6 +1,7 @@
 from flask import Flask
 from flask.ext.pymongo import PyMongo
-from bson.json_util import dumps
+import json
+from bson import json_util
 import os
 
 app = Flask(__name__)
@@ -9,7 +10,7 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def home_page():
-    return dumps(mongo.db.openshift.find_one())
+    return str(json.dumps(mongo.db.openshift.find_one()))
 
 
 
