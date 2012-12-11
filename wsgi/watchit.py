@@ -5,7 +5,10 @@ from bson import json_util
 import os
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = os.environ['OPENSHIFT_MONGODB_DB_URL'] + os.environ['OPENSHIFT_APP_NAME'] + '?auto_start_request=true'
+#app.config['MONGO_URI'] = os.environ['OPENSHIFT_MONGODB_DB_URL'] + os.environ['OPENSHIFT_APP_NAME'] + '?auto_start_request=true'
+app.config['MONGO_HOST'] = os.environ['OPENSHIFT_MONGODB_DB_HOST']
+app.config['MONGO_DBNAME'] = os.environ['OPENSHIFT_APP_NAME']
+
 mongo = PyMongo(app)
 
 @app.route('/')
