@@ -21,6 +21,7 @@ class User:
     def is_authenticated(self):
         return self.is_anonymous()
 
+    @staticmethod
     def get(id):
         return User(id, id)
 

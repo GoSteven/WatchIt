@@ -10,7 +10,7 @@ from User import User
 
 
 _is_deploy = True
-if socket.gethostname() == 'au01rh00122': _is_deploy = False
+if socket.gethostname() in ['au01rh00122','SteMac.local']: _is_deploy = False
 
 
 app = Flask(__name__)
