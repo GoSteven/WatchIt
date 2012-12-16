@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="row-fluid">
+
+        <div class="hero-unit">
+            <h1>Watch It!</h1>
+            <p>Add a new link to keep an eye on it. You will be notified by email when the page updates.</p>
+            <p>
+                <a class="btn btn-large btn-primary" type="button" href="{{ url_for('login_facebook') }}">Login via Facebook</a>
+                <a class="btn btn-large btn-info" type="button" href="{{ url_for('login_twitter') }}">Login via Twitter</a>
+            </p>
+        </div>
+
+</div><!--/row-->
+
+
+{% endblock %}
+
+
